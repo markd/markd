@@ -11,7 +11,7 @@ const express = require('express')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = require('./webpack.dev.conf')
-const favicon = require('serve-favicon')
+// const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 
 // default port where dev server listens for incoming traffic
@@ -32,7 +32,7 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
   quiet: true
 })
 
-app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')))
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: false,
