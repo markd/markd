@@ -1,6 +1,10 @@
 # markit
 > Bookmarks !
 
+Made with ♥️ by devcord users. 
+
+@redxtech @lostdesign @Dragory @bdbch
+
 ## Setup
 ``` bash
 # install dependencies
