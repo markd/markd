@@ -47,4 +47,4 @@ $ yarn serve:dev
  - dexie (for indexDB)
 
 ## About
-markit by the people of devcord
+markit is made by the people of devcord
