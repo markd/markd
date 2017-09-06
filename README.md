@@ -3,7 +3,12 @@
 
 Made with ♥️ by devcord users. 
 
-@redxtech @lostdesign @Dragory @bdbch
+[@redxtech], [@lostdesign], [@Dragory], & [@bdbch]
+
+[@redxtech]: https://github.com/redxtech
+[@lostdesign]: https://github.com/lostdesign
+[@Dragory]: https://github.com/Dragory
+[@bdbch]: https://github.com/bdbch
 
 ## Setup
 ``` bash
