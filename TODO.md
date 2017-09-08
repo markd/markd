@@ -7,7 +7,7 @@
   - multiple tags
 - storage with dropbox
 - storage with google drive
-- storage with markit proprietary servers
+- storage with markd proprietary servers
 - filter duplicates
   - have fuzziness slider to loosen requirements on duplicate matching
 

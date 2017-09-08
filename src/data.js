@@ -1,2 +1,2 @@
 /* eslint-env browser */
-export const title = 'markit'
+export const title = 'markd'

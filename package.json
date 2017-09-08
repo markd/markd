@@ -1,5 +1,5 @@
 {
-  "name": "markit",
+  "name": "markd",
   "version": "1.0.0",
   "description": "Bookmarks !",
   "authors": [
@@ -10,8 +10,8 @@
     "prebuild": "yarn lint --silent",
     "build": "node build/build.js",
     "dev": "node build/dev-server.js",
-    "serve": "node bin/markit",
-    "serve:dev": "nodemon bin/markit --ignore src/ --ignore build/",
+    "serve": "node bin/markd",
+    "serve:dev": "nodemon bin/markd --ignore src/ --ignore build/",
     "start": "npm-run-all --parallel build serve",
     "lint": "eslint --ext .js,.vue src",
     "mkenv": "cp .env_template .env",

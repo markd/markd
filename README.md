@@ -1,5 +1,5 @@
-# markit
->markit is a open source bookmark manager, made with ♥️ by devcord users. 
+# markd
+>markd is a open source bookmark manager, made with ♥️ by devcord users. 
 
 
 ## Setup
@@ -39,7 +39,7 @@ $ yarn serve:dev
  - dexie (for indexDB)
 
 ## About
-markit is made by the people of devcord
+markd is made by the people of devcord
 [@redxtech], [@lostdesign], [@Dragory], & [@bdbch]
 
 [@redxtech]: https://github.com/redxtech
