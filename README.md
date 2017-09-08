@@ -1,14 +1,6 @@
 # markit
-> Bookmarks !
+>markit is a open source bookmark manager, made with ♥️ by devcord users. 
 
-Made with ♥️ by devcord users. 
-
-[@redxtech], [@lostdesign], [@Dragory], & [@bdbch]
-
-[@redxtech]: https://github.com/redxtech
-[@lostdesign]: https://github.com/lostdesign
-[@Dragory]: https://github.com/Dragory
-[@bdbch]: https://github.com/bdbch
 
 ## Setup
 ``` bash
@@ -48,3 +40,9 @@ $ yarn serve:dev
 
 ## About
 markit is made by the people of devcord
+[@redxtech], [@lostdesign], [@Dragory], & [@bdbch]
+
+[@redxtech]: https://github.com/redxtech
+[@lostdesign]: https://github.com/lostdesign
+[@Dragory]: https://github.com/Dragory
+[@bdbch]: https://github.com/bdbch
