@@ -17,7 +17,9 @@
     "mkenv": "cp .env_template .env",
     "preversion": "git pull && npm up && yarn std --silent",
     "version": "yarn build && git add -A .",
-    "postversion": "git push --tags origin HEAD"
+    "postversion": "git push --tags origin HEAD",
+    "test": "./node_modules/karma/bin/karma start --single-run true",
+    "test:watch": "./node_modules/karma/bin/karma start --auto-watch true"
   },
   "dependencies": {
     "axios": "latest",
@@ -62,6 +64,11 @@
     "friendly-errors-webpack-plugin": "latest",
     "html-webpack-plugin": "latest",
     "http-proxy-middleware": "latest",
+    "jasmine": "latest",
+    "karma": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-webpack": "latest",
+    "karma-jasmine": "latest",
     "nodemon": "latest",
     "npm-run-all": "latest",
     "opn": "latest",
