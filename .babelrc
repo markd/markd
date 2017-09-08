@@ -4,7 +4,18 @@
       "modules": false
     }]
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": [
+    "transform-runtime",
+    [
+      "component",
+      [
+        {
+          "libraryName": "element-ui",
+          "styleLibraryName": "theme-default"
+        }
+      ]
+    ]
+  ],
   "env": {
     "test": {
       "presets": ["env"],
