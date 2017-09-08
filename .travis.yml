@@ -4,7 +4,9 @@ node_js:
   - "lts/*"
 before_script:
   - yarn
-script: yarn build
+script: 
+  - yarn test
+  - yarn build
 cache:
   yarn: true
   directories:
