@@ -18,8 +18,8 @@
     "preversion": "git pull && npm up && yarn std --silent",
     "version": "yarn build && git add -A .",
     "postversion": "git push --tags origin HEAD",
-    "test": "./node_modules/karma/bin/karma start --single-run true",
-    "test:watch": "./node_modules/karma/bin/karma start --auto-watch true"
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "dependencies": {
     "axios": "latest",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "autoprefixer": "latest",
+    "ava": "^0.22.0",
     "babel-core": "latest",
     "babel-eslint": "latest",
     "babel-loader": "latest",
@@ -64,13 +65,9 @@
     "friendly-errors-webpack-plugin": "latest",
     "html-webpack-plugin": "latest",
     "http-proxy-middleware": "latest",
-    "jasmine": "latest",
-    "karma": "latest",
-    "karma-phantomjs-launcher": "latest",
-    "karma-webpack": "latest",
-    "karma-jasmine": "latest",
     "nodemon": "latest",
     "npm-run-all": "latest",
+    "nyc": "latest",
     "opn": "latest",
     "optimize-css-assets-webpack-plugin": "latest",
     "ora": "latest",
@@ -96,5 +93,23 @@
   },
   "browserslist": [
     "last 3 versions"
-  ]
+  ],
+  "ava": {
+    "files": [
+      "tests/**/*.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ],
+    "match": [],
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "tap": true,
+    "powerAssert": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
 }
