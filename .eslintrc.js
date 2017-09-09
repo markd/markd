@@ -9,7 +9,6 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:vue/base',
     'plugin:vue/recommended'
   ],
   plugins: [
@@ -18,6 +17,32 @@ module.exports = {
   'rules': {
     'arrow-parens': 0,
     'generator-star-spacing': 0,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'vue/return-in-computed-property': 2,
+    'vue/no-dupe-keys': 2,
+    'vue/require-render-return': 2,
+    'vue/no-duplicate-attributes': 2,
+    'vue/attribute-hyphenation': 2,
+    'vue/html-quotes': 2,
+    'vue/no-multi-spaces': 2,
+    'vue/order-in-components': [
+      2, {
+        order: [
+          'el',
+          ['name', 'delimiters', 'functional', 'model'],
+          ['components', 'directives', 'filters'],
+          ['parent', 'mixins', 'extends', 'provide', 'inject'],
+          'template',
+          'props',
+          'propsData',
+          'data',
+          'computed',
+          'watch',
+          'LIFECYCLE_HOOKS',
+          'methods',
+          'render',
+          'renderError'
+        ]
+      }]
   }
 }
