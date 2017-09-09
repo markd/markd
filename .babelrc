@@ -1,5 +1,7 @@
 {
   "presets": [
+    "@ava/stage-4",
+		"@ava/transform-test-files",
     ["env", {
       "modules": false
     }]
@@ -19,7 +21,7 @@
   "env": {
     "test": {
       "presets": ["env"],
-      "plugins": ["istanbul"]
+      "plugins": []
     }
   }
 }
