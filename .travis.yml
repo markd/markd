@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
+before_script:
+  - yarn
+script: 
+  - yarn test
+  - yarn build
+cache:
+  yarn: true
+  directories:
+    - node_modules
