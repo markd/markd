@@ -2,8 +2,6 @@ import { Card } from 'element-ui'
 
 import Vue from 'vue'
 import App from './App.vue'
-import 'element-ui/lib/theme-default/index.css'
-import './assets/scss/styles.scss'
 
 import { store } from './store/main'
 
