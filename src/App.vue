@@ -22,7 +22,7 @@
 <style lang="scss">
   #app {
     display: grid;
-    grid-template-columns:  300px 1fr;
+    grid-template-columns:  256px 1fr;
     grid-template-areas: "sidebar content";
   }
 </style>
