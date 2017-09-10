@@ -2,7 +2,7 @@
   <div class="sidebarGroup">
     <h2 class="sidebarGroup__title">{{title}}</h2>
     <div class="sidebarGroup__content">
-      {{children}}
+      <slot></slot>
     </div>
   </div>
 </template>
