@@ -1,19 +1,28 @@
 <template>
-  <sidebar :title="title"></sidebar>
+  <div id="app" class="light">
+    <sidebar></sidebar>
+  </div>
 </template>
 
 <script>
   import Sidebar from './components/Sidebar.vue'
-  import { title } from './data'
   export default {
-    name: 'App',
     components: {
       Sidebar
     },
+    name: 'App',
     data () {
       return {
-        title
+        //
       }
     }
   }
 </script>
+
+<style lang="scss">
+  #app {
+    display: grid;
+    grid-template-columns:  300px 1fr;
+    grid-template-areas: "sidebar content";
+  }
+</style>
