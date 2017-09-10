@@ -18,8 +18,8 @@
     "preversion": "git pull && npm up && yarn std --silent",
     "version": "yarn build && git add -A .",
     "postversion": "git push --tags origin HEAD",
-    "test": "ava",
-    "test:watch": "ava --watch"
+    "test": "ava | tnyan",
+    "test:watch": "ava --watch | tnyan"
   },
   "dependencies": {
     "axios": "latest",
@@ -27,7 +27,6 @@
     "cookie-parser": "latest",
     "debug": "latest",
     "dotenv": "latest",
-    "element-ui": "latest",
     "morgan": "latest",
     "node-sass": "latest",
     "pug": "latest",
@@ -81,6 +80,7 @@
     "sass-loader": "latest",
     "semver": "latest",
     "shelljs": "latest",
+    "tap-nyan": "latest",
     "url-loader": "latest",
     "vue-loader": "latest",
     "vue-style-loader": "latest",

@@ -1,14 +1,10 @@
 <template>
-  <el-card :header="title">
-    <p>Hey there.</p>
-  </el-card>
+    <div></div>
 </template>
 
 <script>
   import { title } from './data'
-  import ElCard from '../node_modules/element-ui/packages/card/src/main.vue'
   export default {
-    components: { ElCard },
     name: 'app',
     data () {
       return {
