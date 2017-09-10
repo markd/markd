@@ -7,16 +7,7 @@
     }]
   ],
   "plugins": [
-    "transform-runtime",
-    [
-      "component",
-      [
-        {
-          "libraryName": "element-ui",
-          "styleLibraryName": "theme-default"
-        }
-      ]
-    ]
+    "transform-runtime"
   ],
   "env": {
     "test": {

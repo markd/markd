@@ -67,7 +67,6 @@
     "http-proxy-middleware": "latest",
     "nodemon": "latest",
     "npm-run-all": "latest",
-    "nyc": "latest",
     "opn": "latest",
     "optimize-css-assets-webpack-plugin": "latest",
     "ora": "latest",
