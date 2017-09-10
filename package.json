@@ -7,7 +7,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "yarn lint --silent",
+    "prebuild": "yarn lint",
     "build": "node build/build.js",
     "dev": "node build/dev-server.js",
     "serve": "node bin/markd",
@@ -15,7 +15,7 @@
     "start": "npm-run-all --parallel build serve",
     "lint": "eslint --ext .js,.vue src",
     "mkenv": "cp .env_template .env",
-    "preversion": "git pull && npm up && yarn std --silent",
+    "preversion": "git pull && npm up && yarn lint",
     "version": "yarn build && git add -A .",
     "postversion": "git push --tags origin HEAD",
     "test": "ava",
