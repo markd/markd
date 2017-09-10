@@ -45,6 +45,7 @@
     "babel-plugin-transform-runtime": "latest",
     "babel-preset-env": "latest",
     "babel-register": "latest",
+    "browser-env": "latest",
     "chalk": "latest",
     "connect-history-api-fallback": "latest",
     "copy-webpack-plugin": "latest",
@@ -73,6 +74,9 @@
     "ora": "latest",
     "postcss": "latest",
     "postcss-cssnext": "latest",
+    "require-extension-hooks": "latest",
+    "require-extension-hooks-babel": "latest",
+    "require-extension-hooks-vue": "latest",
     "rimraf": "latest",
     "sass-loader": "latest",
     "semver": "latest",
@@ -99,7 +103,8 @@
       "tests/**/*.js"
     ],
     "source": [
-      "src/**/*.js"
+      "src/**/*.js",
+      "src/**/*.vue"
     ],
     "match": [],
     "concurrency": 5,
@@ -108,7 +113,8 @@
     "tap": true,
     "powerAssert": true,
     "require": [
-      "babel-register"
+      "babel-register",
+      "./tests/helpers/setup.js"
     ],
     "babel": "inherit"
   }
