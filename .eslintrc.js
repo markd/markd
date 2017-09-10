@@ -25,24 +25,7 @@ module.exports = {
     'vue/attribute-hyphenation': 2,
     'vue/html-quotes': 2,
     'vue/no-multi-spaces': 2,
-    'vue/order-in-components': [
-      2, {
-        order: [
-          'el',
-          ['name', 'delimiters', 'functional', 'model'],
-          ['components', 'directives', 'filters'],
-          ['parent', 'mixins', 'extends', 'provide', 'inject'],
-          'template',
-          'props',
-          'propsData',
-          'data',
-          'computed',
-          'watch',
-          'LIFECYCLE_HOOKS',
-          'methods',
-          'render',
-          'renderError'
-        ]
-      }]
+    'vue/mustache-interpolation-spacing': 2,
+    'vue/order-in-components': 2
   }
 }

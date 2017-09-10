@@ -6,12 +6,23 @@
   --font-stack: 'Roboto', BlinkMacSystemFont, -apple-system, "Oxygen", "Ubuntu", "Fira Sans", "Helvetica", "Arial", sans-serif;
   .light {
     // Light theme variables
+    --font-color: #424242;
   }
   .dark {
     // Dark theme variables
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: var(--font-stack);
+  color: var(--font-color);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
