@@ -1,11 +1,11 @@
 <template>
-  <div class="group">
-    <div class="group-title">Pinned</div>
-    <div class="group-items">
-      <div class="group-item">
+  <div class="sidebar__group pinned">
+    <div class="sidebar__groupTitle">Pinned</div>
+    <div class="sidebar__groupItems">
+      <div class="sidebar__groupItem">
         <template v-for="(pin, i) in pinned">
-          <i class="material-icons" v-text="pin.icon"></i>
-          <div class="group-item-name">{{pin.name }}</div>
+          <i class="sidebar__groupItemIcon material-icons" v-text="pin.icon"></i>
+          <div class="sidebar__groupItemName">{{pin.name }}</div>
         </template>
       </div>
     </div>
@@ -24,26 +24,5 @@
 </script>
 
 <style lang="scss">
-  .group {
-    margin-top: 12px;
-    margin-left: 20px;
-    .group-title {
-      color: #CCCCCC;
-      font-size: 9px;
-    }
-    .group-items {
-      .group-item {
-        i {
-          position: absolute;
-          color: #CCCCCC;
-          font-size: 18px;
-        }
-        .group-item-name {
-          color: var(--font-color);
-          font-size: 18px;
-          margin-left: 25px;
-        }
-      }
-    }
-  }
+
 </style>

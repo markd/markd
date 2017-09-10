@@ -1,29 +1,28 @@
 <template>
   <div class="sidebar">
-    <div class="title">
-      <h1>{{ title | cap }}</h1>
+    <div class="sidebar__header">
+      <h1 class="sidebar__title">{{ title }}</h1>
     </div>
-    <div class="sidebar-content">
-      <pinned></pinned>
-      <groups></groups>
+    <hr class="sidebar__separator" />
+    <div class="sidebar__content">
+      <SidebarGroup title="Pinned">
+        <Pinned />
+      </SidebarGroup>
+      <hr class="sidebar__separator" />
+      <SidebarGroup title="Collections"></SidebarGroup>
     </div>
   </div>
 </template>
 
 <script>
   import Pinned from './Pinned.vue'
-  import Groups from './Groups.vue'
+  import SidebarGroup from './SidebarGroup.vue'
   // noinspection JSUnusedGlobalSymbols
   export default {
     name: 'Sidebar',
     components: {
-      Pinned,
-      Groups
-    },
-    filters: {
-      cap (val) {
-        return val.toUpperCase()
-      }
+      SidebarGroup,
+      Pinned
     },
     data () {
       return {
@@ -34,27 +33,32 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .sidebar {
     grid-area: sidebar;
     min-height: 100vh;
     background-color: #f9f9f9;
-    // gradient
-    // background: linear-gradient(135.04deg, #FFAA85 -24.81%, #B3315F 121.89%);
+    border-right: 1px solid #e0e0e0;
+  }
 
-    .title {
-      margin-top: 24px;
-      margin-left: 18px;
+  .sidebar__header {
+    background-color: #e0e0e0;
+    padding: 16px;
+  }
 
-      h1 {
-        margin: 0;
-        font-style: normal;
-        font-weight: bold;
-        line-height: normal;
-        font-size: 26px;
-        width: auto;
-        color: #424242;
-      }
-    }
+  .sidebar__title {
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    width: auto;
+  }
+
+  .sidebar__separator {
+    background-color: #e0e0e0;
+    border: 0;
+    height: 1px;
+    margin: 0;
   }
 </style>
