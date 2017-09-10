@@ -3,6 +3,10 @@
     "@ava/stage-4",
 		"@ava/transform-test-files",
     ["env", {
+      "targets": {
+        "uglify": true
+      },
+      "useBuiltIns": true,
       "modules": false
     }]
   ],

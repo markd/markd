@@ -1,7 +1,8 @@
 # markd
 >markd is a open source bookmark manager, made with ♥️ by devcord users. 
 
-
+[![Build Status](https://travis-ci.org/markd/markd.svg?branch=master)](https://travis-ci.org/markd/markd)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/markd/markd/blob/master/LICENSE)
 ## Setup
 ``` bash
 # install dependencies
