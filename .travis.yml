@@ -5,7 +5,7 @@ node_js:
 before_script:
   - yarn
 script: 
-  - yarn test
+  - yarn test:ci
   - yarn build
 cache:
   yarn: true
