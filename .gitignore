@@ -173,3 +173,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# generated Test files
+tests/snapshots/
