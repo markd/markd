@@ -1,10 +1,12 @@
 language: node_js
+notifications:
+  webhooks: https://redxtech.me/travis-ci.php
 node_js:
   - "node"
   - "lts/*"
 before_script:
   - yarn
-script: 
+script:
   - yarn test:ci
   - yarn build
 cache:
