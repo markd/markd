@@ -1,6 +1,6 @@
 <template>
   <div class="sidebarGroup">
-    <h2 class="sidebarGroup__title">{{title}}</h2>
+    <h2 class="sidebarGroup__title" v-text="title"></h2>
     <div class="sidebarGroup__content">
       <slot></slot>
     </div>
@@ -22,6 +22,9 @@
 
   .sidebarGroup__title {
     color: #CCCCCC;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
     font-size: 12px;
     margin: 0 0 16px;
   }

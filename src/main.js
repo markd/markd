@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import './assets/scss/styles.scss'
 import { store } from './store/main'
 
 Vue.config.devtools = true
