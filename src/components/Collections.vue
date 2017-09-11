@@ -21,21 +21,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .sidebar__groupItem {
-    padding: 2px 0;
-  }
-
-  .sidebar__groupItemIcon {
-    color: #bbbbbb;
-    font-size: 20px;
-    padding-right: 2px;
-  }
-
-  .sidebar__groupItemName {
-    display: inline;
-    color: var(--font-color);
-    font-size: 20px;
-  }
-</style>
