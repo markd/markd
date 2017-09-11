@@ -17,7 +17,7 @@ export const store = new Vuex.Store({
         name: 'Favourite Bookmarks'
       }
     ],
-    groups: [
+    collections: [
       {
         colour: 'red',
         name: 'Web Development'

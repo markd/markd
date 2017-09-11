@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="light">
-    <Sidebar></Sidebar>
+    <sidebar></sidebar>
     <main class="content">
-      <Navigation />
+      <navigation />
     </main>
   </div>
 </template>
