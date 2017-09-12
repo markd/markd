@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__groupItem">
     <i v-if="isIcon" class="sidebar__groupItemIcon material-icons" v-text="collection.icon"></i>
-    <i v-else="isIcon" class="sidebar__groupItemIcon material-icons" :style="this.style">
+    <i v-else class="sidebar__groupItemIcon material-icons" :style="this.style">
       brightness_1
     </i>
     <div class="sidebar__groupItemName">{{ collection.name }}</div>
