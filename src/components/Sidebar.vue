@@ -3,12 +3,12 @@
     <div class="sidebar__header">
       <h1 class="sidebar__title">{{ title }}</h1>
     </div>
-    <hr class="sidebar__separator" />
+    <hr class="sidebar__separator"/>
     <div class="sidebar__content">
       <sidebar-group title="Pinned">
         <pinned></pinned>
       </sidebar-group>
-      <hr class="sidebar__separator" />
+      <hr class="sidebar__separator"/>
       <sidebar-group title="Collections">
         <collections></collections>
       </sidebar-group>
@@ -41,7 +41,7 @@
   .sidebar {
     grid-area: sidebar;
     min-height: 100vh;
-    background: linear-gradient(135.04deg, #FFAA85 -21.57%, #B3315F 121.89%), #F9F9F9;
+    background: linear-gradient(135.04deg, #ffaa85 -21.57%, #b3315f 121.89%), #f9f9f9;
     border-right: 1px solid #e0e0e0;
   }
 
@@ -51,6 +51,8 @@
   }
 
   .sidebar__title {
+    user-select: none;
+    cursor: context-menu;
     color: #ffffff;
     font-style: normal;
     font-weight: bold;
@@ -66,21 +68,5 @@
     border: 0;
     height: 1px;
     margin: 0;
-  }
-
-  .sidebar__groupItem {
-    padding: 2px 0;
-  }
-
-  .sidebar__groupItemIcon {
-    color: #bbbbbb;
-    font-size: 20px;
-    padding-right: 2px;
-  }
-
-  .sidebar__groupItemName {
-    display: inline;
-    color: var(--font-color);
-    font-size: 20px;
   }
 </style>

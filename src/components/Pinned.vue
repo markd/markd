@@ -1,17 +1,23 @@
 <template>
   <div class="sidebar__group pinned">
     <div class="sidebar__groupItems">
-      <div v-for="(pin, i) in pinned" class="sidebar__groupItem">
-        <i class="sidebar__groupItemIcon material-icons" v-text="pin.icon"></i>
-        <div class="sidebar__groupItemName">{{ pin.name }}</div>
-      </div>
+      <sidebar-item
+        v-for="(pin, i) in pinned"
+        :key="`pin-${i}`"
+        :collection="pin">
+      </sidebar-item>
     </div>
   </div>
 </template>
 
 <script>
+  import SidebarItem from './SidebarItem.vue'
+
   export default {
     name: 'Pinned',
+    components: {
+      SidebarItem
+    },
     data () {
       return {
         pinned: this.$store.state.pinned
