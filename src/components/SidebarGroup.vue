@@ -21,7 +21,8 @@
   }
 
   .sidebarGroup__title {
-    color: #CCCCCC;
+    user-select: none;
+    color: #cccccc;
     font-style: normal;
     font-weight: normal;
     line-height: normal;

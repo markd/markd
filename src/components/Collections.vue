@@ -1,19 +1,23 @@
 <template>
   <div class="sidebar__group collections">
     <div class="sidebar__groupItems">
-      <div v-for="(collection, i) in collections" class="sidebar__groupItem">
-        <i class="sidebar__groupItemIcon material-icons" :style="`color: ${collection.colour}`">
-          brightness_1
-        </i>
-        <div class="sidebar__groupItemName">{{ collection.name }}</div>
-      </div>
+      <sidebar-item
+        v-for="(collection, i) in collections"
+        :key="`collection-${i}`"
+        :collection="collection">
+      </sidebar-item>
     </div>
   </div>
 </template>
 
 <script>
+  import SidebarItem from './SidebarItem.vue'
+
   export default {
     name: 'Collections',
+    components: {
+      SidebarItem
+    },
     data () {
       return {
         collections: this.$store.state.collections
