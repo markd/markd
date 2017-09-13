@@ -7,6 +7,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     title,
+    theme: 'dark',
     pinned: [
       {
         icon: 'cloud_queue',

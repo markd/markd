@@ -4,25 +4,25 @@
 // Variables
 :root {
   --font-stack: 'Roboto', BlinkMacSystemFont, -apple-system, "Oxygen", "Ubuntu", "Fira Sans", "Helvetica", "Arial", sans-serif;
+
   .light {
     // Light theme variables
-    --font-color: #424242;
+    --app-background: #fefefe;
+    --app-color: #302f41;
+    --sidebar-background: #302f41;
+    --sidebar-headline-color: #504f5c;
+    --sidebar-color: #6e6d7a;
   }
   .dark {
     // Dark theme variables
+    --app-background: #1d1d25;
+    --app-color: #fff;
+    --sidebar-background: #302f41;
+    --sidebar-headline-color: #504f5c;
+    --sidebar-color: #6e6d7a;
   }
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  font-family: var(--font-stack);
-  color: var(--font-color);
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
 }

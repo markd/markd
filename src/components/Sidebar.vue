@@ -5,11 +5,11 @@
     </div>
     <hr class="sidebar__separator" />
     <div class="sidebar__content">
-      <SidebarGroup title="Pinned">
+      <SidebarGroup title="Pinned items">
         <Pinned />
       </SidebarGroup>
       <hr class="sidebar__separator" />
-      <SidebarGroup title="Collections"></SidebarGroup>
+      <SidebarGroup title="Your collections"></SidebarGroup>
     </div>
   </div>
 </template>
