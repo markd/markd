@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__groupItem">
     <i v-if="isIcon" class="sidebar__groupItemIcon material-icons" v-text="collection.icon"></i>
-    <i v-else class="sidebar__groupItemIcon material-icons" :style="this.style">
+    <i v-else="isIcon" class="sidebar__groupItemIcon material-icons" :style="this.style">
       brightness_1
     </i>
     <div class="sidebar__groupItemName">{{ collection.name }}</div>
@@ -32,8 +32,9 @@
   .sidebar__groupItem {
     cursor: pointer;
     user-select: none;
-    border-radius: 3px;
-    padding: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 8px 4px;
     &:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
     }
