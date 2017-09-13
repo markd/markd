@@ -27,6 +27,6 @@
     font-weight: normal;
     line-height: normal;
     font-size: 12px;
-    margin: 0 0 16px;
+    margin: 0 0 5px;
   }
 </style>
