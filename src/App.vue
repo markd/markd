@@ -25,6 +25,8 @@
 </script>
 
 <style lang="scss">
+  @import "./assets/scss/styles.scss";
+
   #app {
     display: grid;
     grid-template-columns:  256px 1fr;
