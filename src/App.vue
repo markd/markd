@@ -2,7 +2,7 @@
   <div id="app" :class="theme">
     <Sidebar></Sidebar>
     <main class="content">
-      <Navigation />
+      <navigation />
     </main>
   </div>
 </template>

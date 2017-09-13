@@ -9,24 +9,12 @@ export const store = new Vuex.Store({
     title,
     theme: 'dark',
     pinned: [
-      {
-        icon: 'cloud_queue',
-        name: 'All Bookmarks'
-      },
-      {
-        icon: 'favorite_border',
-        name: 'Favourite Bookmarks'
-      }
+      { icon: 'cloud_queue', name: 'All Bookmarks' },
+      { icon: 'favorite_border', name: 'Favourite Bookmarks' }
     ],
-    groups: [
-      {
-        colour: 'red',
-        name: 'Web Development'
-      },
-      {
-        colour: 'green',
-        name: 'Spicy Memes'
-      }
+    collections: [
+      { colour: 'red', name: 'Web Development' },
+      { colour: 'green', name: 'Spicy Memes' }
     ]
   }
 })

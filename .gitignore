@@ -176,3 +176,4 @@ Temporary Items
 
 # generated Test files
 tests/snapshots/
+tests/components/snapshots/

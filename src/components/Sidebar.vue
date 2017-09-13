@@ -3,7 +3,7 @@
     <div class="sidebar__header">
       <h1 class="sidebar__title">{{ title }}</h1>
     </div>
-    <hr class="sidebar__separator" />
+    <hr class="sidebar__separator"/>
     <div class="sidebar__content">
       <SidebarGroup title="Pinned items">
         <Pinned />
@@ -16,13 +16,15 @@
 
 <script>
   import Pinned from './Pinned.vue'
+  import Collections from './Collections.vue'
   import SidebarGroup from './SidebarGroup.vue'
   // noinspection JSUnusedGlobalSymbols
   export default {
     name: 'Sidebar',
     components: {
       SidebarGroup,
-      Pinned
+      Pinned,
+      Collections
     },
     data () {
       return {
@@ -33,30 +35,34 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .sidebar {
     grid-area: sidebar;
     min-height: 100vh;
-    background-color: #f9f9f9;
+    background: linear-gradient(135.04deg, #ffaa85 -21.57%, #b3315f 121.89%), #f9f9f9;
     border-right: 1px solid #e0e0e0;
   }
 
   .sidebar__header {
-    background-color: #e0e0e0;
+    /*background-color: #e0e0e0;*/
     padding: 16px;
   }
 
   .sidebar__title {
-    color: #777;
-    font-size: 16px;
-    font-weight: 400;
+    user-select: none;
+    cursor: context-menu;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 26px;
     margin: 0;
     text-transform: uppercase;
     width: auto;
   }
 
   .sidebar__separator {
-    background-color: #e0e0e0;
+    background-color: transparent;
     border: 0;
     height: 1px;
     margin: 0;

@@ -1,10 +1,10 @@
 <template>
-  <div class="sidebar__group pinned">
+  <div class="sidebar__group collections">
     <div class="sidebar__groupItems">
       <sidebar-item
-        v-for="(pin, i) in pinned"
-        :key="`pin-${i}`"
-        :collection="pin">
+        v-for="(collection, i) in collections"
+        :key="`collection-${i}`"
+        :collection="collection">
       </sidebar-item>
     </div>
   </div>
@@ -14,13 +14,13 @@
   import SidebarItem from './SidebarItem.vue'
 
   export default {
-    name: 'Pinned',
+    name: 'Collections',
     components: {
       SidebarItem
     },
     data () {
       return {
-        pinned: this.$store.state.pinned
+        collections: this.$store.state.collections
       }
     }
   }
