@@ -33,6 +33,7 @@
     "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.3",
     "request": "^2.81.0",
+    "reset-css": "^2.2.1",
     "serve-favicon": "^2.4.3",
     "vue": "^2.4.2",
     "vuex": "^2.4.0"
