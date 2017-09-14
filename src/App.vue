@@ -8,8 +8,11 @@
 </template>
 
 <script>
+  import db from './database'
+
   import Sidebar from './components/Sidebar.vue'
   import Navigation from './components/Navigation.vue'
+
   export default {
     components: {
       Sidebar,
@@ -20,6 +23,11 @@
       return {
         //
       }
+    },
+    created () {
+      db.settings.each((setting) => {
+        console.log(setting)
+      })
     }
   }
 </script>
