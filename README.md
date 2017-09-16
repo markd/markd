@@ -8,11 +8,8 @@
 # install dependencies
 $ yarn
 
-# copy template .env file
+# set up .env file
 $ yarn mkenv
-
-# edit .env file (set custom port)
-$ nano .env
 
 # lint files with eslint (standardjs config)
 $ yarn lint
