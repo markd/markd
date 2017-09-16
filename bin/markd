@@ -30,11 +30,18 @@ app.use((req, res, next) => {
 
 // noinspection JSUnusedLocalSymbols
 app.use((err, req, res, next) => {
-  res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
+  const message = err.message
+  const error = req.app.get('env') === 'development' ? err : {}
+
+  res.locals.message = message
+  res.locals.error = error
 
   res.status(err.status || 500)
-  res.render('error')
+  res.write(`<!DOCTYPE HTML><html lang=en><meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>${error.status || 'Error'} | markd</title>
+  <body><h1>${error.status || 'Error'}</h1><h3>${message}</h3></body></html>`)
 })
 
 const port = normalizePort(process.env.PORT || '8000')
