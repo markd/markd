@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="light">
-    <sidebar></sidebar>
+  <div id="app" :class="theme">
+    <Sidebar></Sidebar>
     <main class="content">
       <navigation />
     </main>
@@ -21,7 +21,7 @@
     name: 'App',
     data () {
       return {
-        //
+        theme: this.$store.state.theme
       }
     },
     created () {
@@ -36,7 +36,9 @@
   @import "./assets/scss/styles.scss";
 
   #app {
+    color: var(--app-color);
     display: grid;
+    font-family: var(--font-stack);
     grid-template-columns:  256px 1fr;
     grid-template-areas: "sidebar content";
   }
