@@ -8,12 +8,12 @@ export const store = new Vuex.Store({
   state: {
     title,
     pinned: [
-      { icon: 'cloud_queue', name: 'All Bookmarks' },
-      { icon: 'favorite_border', name: 'Favourite Bookmarks' }
+      { icon: 'book', name: 'All Bookmarks', active: true },
+      { icon: 'star', name: 'Favourite Bookmarks', active: false }
     ],
     collections: [
-      { colour: 'red', name: 'Web Development' },
-      { colour: 'green', name: 'Spicy Memes' }
+      { colour: 'red', name: 'Web Development', active: false },
+      { colour: 'green', name: 'Spicy Memes', active: false }
     ]
   }
 })

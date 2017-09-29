@@ -75,7 +75,7 @@
     width: 12px;
     height: 12px;
     display: block;
-    fill: var(--font-color-invert);
+    color: var(--font-color-invert);
   }
 
   .sidebar__title {

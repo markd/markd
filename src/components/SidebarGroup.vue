@@ -16,17 +16,13 @@
 </script>
 
 <style lang="scss" scoped>
-  .sidebarGroup {
-    padding: 24px 16px 16px;
-  }
-
   .sidebarGroup__title {
     user-select: none;
-    color: #cccccc;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 12px;
-    margin: 0 0 5px;
+    color: var(--sidebar-title-color);
+    line-height: 1;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 24px 12px 8px;
   }
 </style>

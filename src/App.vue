@@ -37,8 +37,12 @@
 
   #app {
     display: grid;
-    grid-template-columns:  256px 1fr;
+    grid-template-columns:  320px 1fr;
     grid-template-areas: "sidebar content";
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns:  256px 1fr;
+    }
   }
 
   .content {

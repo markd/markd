@@ -14,7 +14,10 @@
     --border-color: #e8e8e8;
     --sidebar-color: #2b3139;
     --sidebar-color-active: #424952;
+    --sidebar-color-hover: lighten(#2b3139, 4);
     --sidebar-color-dark: #23282F;
+    --sidebar-title-color: #707780;
+    --sidebar-icon-color: #C4C4C4;
     --overlay: rgba(0, 0, 0, .25);
   }
 
@@ -27,7 +30,10 @@
     --border-color: #e8e8e8;
     --sidebar-color: #2b3139;
     --sidebar-color-active: #424952;
+    --sidebar-color-hover: lighten(#2b3139, 4);
     --sidebar-color-dark: #23282F;
+    --sidebar-title-color: #707780;
+    --sidebar-icon-color: #C4C4C4;
     --overlay: rgba(0, 0, 0, .25);
   }
 }
