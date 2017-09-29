@@ -46,7 +46,7 @@
 
     &--active,
     &--active:hover {
-      color: var(--font-color);
+      color: var(--sidebar-color-active-text);
       background: var(--sidebar-color-active);
     }
   }
