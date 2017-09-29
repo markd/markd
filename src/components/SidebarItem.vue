@@ -32,6 +32,7 @@
 
 <style lang="scss" scoped>
   .sidebar__groupItem {
+    color: rgba(255, 255, 255, .45);
     cursor: pointer;
     user-select: none;
     border-top-left-radius: 4px;
@@ -39,11 +40,13 @@
     padding: 12px;
 
     &:hover {
+      color: rgba(255, 255, 255, .75);
       background: var(--sidebar-color-hover);
     }
 
     &--active,
     &--active:hover {
+      color: var(--font-color-invert);
       background: var(--sidebar-color-active);
     }
   }
@@ -58,7 +61,6 @@
 
   .sidebar__groupItemName {
     display: inline;
-    color: var(--font-color-invert);
     font-size: 16px;
     line-height: 1;
     vertical-align: middle;
