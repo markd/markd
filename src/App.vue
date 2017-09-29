@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="light">
-    <sidebar></sidebar>
+    <navigation />
+    <sidebar />
     <main class="content">
-      <navigation />
     </main>
   </div>
 </template>
@@ -38,10 +38,12 @@
   #app {
     display: grid;
     grid-template-columns:  320px 1fr;
-    grid-template-areas: "sidebar content";
+    grid-template-areas:
+      "sidebar navigation"
+      "sidebar content";
 
     @media screen and (max-width: 800px) {
-      grid-template-columns:  256px 1fr;
+      grid-template-columns: 256px 1fr;
     }
   }
 

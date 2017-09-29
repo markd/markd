@@ -8,7 +8,6 @@
         </svg>
       </button>
     </div>
-    <hr class="sidebar__separator"/>
     <div class="sidebar__content">
       <sidebar-group title="Pinned">
         <pinned></pinned>
@@ -48,10 +47,10 @@
 
 <style lang="scss">
   .sidebar {
+    border-right: 1px solid #333;
     grid-area: sidebar;
     min-height: 100vh;
     background: var(--sidebar-color);
-    border-right: 1px solid #e0e0e0;
   }
 
   .sidebar__header {
@@ -93,12 +92,5 @@
     line-height: 1;
     margin: 0;
     width: auto;
-  }
-
-  .sidebar__separator {
-    background-color: transparent;
-    border: 0;
-    height: 1px;
-    margin: 0;
   }
 </style>
