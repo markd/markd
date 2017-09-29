@@ -64,13 +64,14 @@
   .sidebar__addBookmark {
     background-color: var(--overlay);
     border: 0;
+    border-radius: 4px;
     cursor: pointer;
     height: 30px;
     padding: 9px;
     width: 30px;
 
     &:hover {
-      background-color: rgba(0, 0, 0, .45);
+      background-color: var(--overlay-hover);
     }
   }
 

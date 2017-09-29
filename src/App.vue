@@ -48,9 +48,10 @@
   }
 
   .content {
-    background: #fff;
+    background: var(--content-background);
     display: flex;
     grid-area: content;
     min-height: 100vh;
+    overflow: auto;
   }
 </style>

@@ -46,7 +46,7 @@
 
     &--active,
     &--active:hover {
-      color: var(--font-color-invert);
+      color: var(--font-color);
       background: var(--sidebar-color-active);
     }
   }
