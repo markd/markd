@@ -13,9 +13,11 @@
       <sidebar-group title="Pinned">
         <pinned></pinned>
       </sidebar-group>
-      <hr class="sidebar__separator"/>
       <sidebar-group title="Collections">
         <collections></collections>
+      </sidebar-group>
+      <sidebar-group title="Tags">
+        <tags></tags>
       </sidebar-group>
     </div>
   </div>
@@ -24,6 +26,7 @@
 <script>
   import Pinned from './Pinned.vue'
   import Collections from './Collections.vue'
+  import Tags from './Tags.vue'
   import SidebarGroup from './SidebarGroup.vue'
   // noinspection JSUnusedGlobalSymbols
   export default {
@@ -31,7 +34,8 @@
     components: {
       SidebarGroup,
       Pinned,
-      Collections
+      Collections,
+      Tags
     },
     data () {
       return {

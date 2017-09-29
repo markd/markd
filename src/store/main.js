@@ -14,6 +14,11 @@ export const store = new Vuex.Store({
     collections: [
       { colour: 'red', name: 'Web Development', active: false },
       { colour: 'green', name: 'Spicy Memes', active: false }
+    ],
+    tags: [
+      { icon: 'hash', name: 'reads', active: false },
+      { icon: 'hash', name: 'blog', active: false },
+      { icon: 'hash', name: 'news', active: false }
     ]
   }
 })
