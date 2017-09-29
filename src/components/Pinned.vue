@@ -1,11 +1,7 @@
 <template>
   <div class="sidebar__group pinned">
     <div class="sidebar__groupItems">
-      <sidebar-item
-        v-for="(pin, i) in pinned"
-        :key="`pin-${i}`"
-        :collection="pin">
-      </sidebar-item>
+      <sidebar-item v-for="(pin, i) in pinned" :key="`pin-${i}`" :collection="pin" />
     </div>
   </div>
 </template>
