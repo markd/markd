@@ -1,8 +1,9 @@
 <template>
   <div id="app" class="light">
-    <sidebar></sidebar>
+    <icons />
+    <navigation />
+    <sidebar />
     <main class="content">
-      <navigation />
     </main>
   </div>
 </template>
@@ -12,11 +13,13 @@
 
   import Sidebar from './components/Sidebar.vue'
   import Navigation from './components/Navigation.vue'
+  import Icons from './components/Icons.vue'
 
   export default {
     components: {
       Sidebar,
-      Navigation
+      Navigation,
+      Icons
     },
     name: 'App',
     data () {
@@ -37,14 +40,21 @@
 
   #app {
     display: grid;
-    grid-template-columns:  256px 1fr;
-    grid-template-areas: "sidebar content";
+    grid-template-columns:  320px 1fr;
+    grid-template-areas:
+      "sidebar navigation"
+      "sidebar content";
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 256px 1fr;
+    }
   }
 
   .content {
-    background: #fff;
+    background: var(--content-background);
     display: flex;
     grid-area: content;
     min-height: 100vh;
+    overflow: auto;
   }
 </style>

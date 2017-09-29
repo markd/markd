@@ -27,6 +27,7 @@
   .navigation {
     align-items: center;
     border-bottom: 1px solid #e0e0e0;
+    grid-area: navigation;
     display: flex;
     height: 56px;
     padding: 4px 16px;

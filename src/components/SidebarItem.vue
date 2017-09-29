@@ -1,9 +1,11 @@
 <template>
-  <div class="sidebar__groupItem">
-    <i v-if="isIcon" class="sidebar__groupItemIcon material-icons" v-text="collection.icon"></i>
-    <i v-else="isIcon" class="sidebar__groupItemIcon material-icons" :style="this.style">
-      brightness_1
-    </i>
+  <div class="sidebar__groupItem" :class="{ 'sidebar__groupItem--active': collection.active }">
+    <svg v-if="isIcon" class="sidebar__groupItemIcon">
+      <use :xlink:href="'#icon-' + collection.icon" />
+    </svg>
+    <svg v-else class="sidebar__groupItemIcon" :style="this.style">
+      <use xlink:href="#icon-circle" />
+    </svg>
     <div class="sidebar__groupItemName">{{ collection.name }}</div>
   </div>
 </template>
@@ -30,29 +32,37 @@
 
 <style lang="scss" scoped>
   .sidebar__groupItem {
+    color: rgba(255, 255, 255, .45);
     cursor: pointer;
     user-select: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    padding: 8px 4px;
+    padding: 12px;
+
     &:hover {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+      color: rgba(255, 255, 255, .75);
+      background: var(--sidebar-color-hover);
+    }
+
+    &--active,
+    &--active:hover {
+      color: var(--sidebar-color-active-text);
+      background: var(--sidebar-color-active);
     }
   }
 
   .sidebar__groupItemIcon {
-    color: #bbbbbb;
-    font-size: 20px;
-    padding-right: 2px;
-    line-height: 20px;
+    color: var(--sidebar-icon-color);
+    height: 16px;
     vertical-align: middle;
+    width: 16px;
+    margin-right: 4px;
   }
 
   .sidebar__groupItemName {
     display: inline;
-    color: var(--font-color);
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 1;
     vertical-align: middle;
   }
 </style>

@@ -2,15 +2,21 @@
   <div class="sidebar">
     <div class="sidebar__header">
       <h1 class="sidebar__title">{{ title }}</h1>
+      <button onclick="" class="sidebar__addBookmark">
+        <svg class="sidebar__addBookmarkIcon">
+          <use xlink:href="#icon-plus" />
+        </svg>
+      </button>
     </div>
-    <hr class="sidebar__separator"/>
     <div class="sidebar__content">
       <sidebar-group title="Pinned">
         <pinned></pinned>
       </sidebar-group>
-      <hr class="sidebar__separator"/>
       <sidebar-group title="Collections">
         <collections></collections>
+      </sidebar-group>
+      <sidebar-group title="Tags">
+        <tags></tags>
       </sidebar-group>
     </div>
   </div>
@@ -19,6 +25,7 @@
 <script>
   import Pinned from './Pinned.vue'
   import Collections from './Collections.vue'
+  import Tags from './Tags.vue'
   import SidebarGroup from './SidebarGroup.vue'
   // noinspection JSUnusedGlobalSymbols
   export default {
@@ -26,7 +33,8 @@
     components: {
       SidebarGroup,
       Pinned,
-      Collections
+      Collections,
+      Tags
     },
     data () {
       return {
@@ -39,15 +47,39 @@
 
 <style lang="scss">
   .sidebar {
+    border-right: 1px solid #333;
     grid-area: sidebar;
     min-height: 100vh;
-    background: linear-gradient(135.04deg, #ffaa85 -21.57%, #b3315f 121.89%), #f9f9f9;
-    border-right: 1px solid #e0e0e0;
+    background: var(--sidebar-color);
   }
 
   .sidebar__header {
-    /*background-color: #e0e0e0;*/
-    padding: 16px;
+    align-items: center;
+    background-color: var(--sidebar-color-dark);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 12px;
+  }
+
+  .sidebar__addBookmark {
+    background-color: var(--overlay);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 30px;
+    padding: 9px;
+    width: 30px;
+
+    &:hover {
+      background-color: var(--overlay-hover);
+    }
+  }
+
+  .sidebar__addBookmarkIcon {
+    width: 12px;
+    height: 12px;
+    display: block;
+    color: var(--font-color-invert);
   }
 
   .sidebar__title {
@@ -57,16 +89,9 @@
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 26px;
+    font-size: 18px;
+    line-height: 1;
     margin: 0;
-    text-transform: uppercase;
     width: auto;
-  }
-
-  .sidebar__separator {
-    background-color: transparent;
-    border: 0;
-    height: 1px;
-    margin: 0;
   }
 </style>
