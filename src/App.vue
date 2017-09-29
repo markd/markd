@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="light">
+    <icons />
     <navigation />
     <sidebar />
     <main class="content">
@@ -12,11 +13,13 @@
 
   import Sidebar from './components/Sidebar.vue'
   import Navigation from './components/Navigation.vue'
+  import Icons from './components/Icons.vue'
 
   export default {
     components: {
       Sidebar,
-      Navigation
+      Navigation,
+      Icons
     },
     name: 'App',
     data () {
