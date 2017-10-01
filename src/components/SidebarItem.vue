@@ -37,7 +37,7 @@
     user-select: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    padding: 12px;
+    padding: 8px 12px;
 
     &:hover {
       color: rgba(255, 255, 255, .75);
@@ -61,7 +61,7 @@
 
   .sidebar__groupItemName {
     display: inline;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     vertical-align: middle;
   }

@@ -20,9 +20,9 @@
     user-select: none;
     color: var(--sidebar-title-color);
     line-height: 1;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 24px 12px 8px;
+    padding: 24px 12px 4px;
   }
 </style>
