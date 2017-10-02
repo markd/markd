@@ -32,6 +32,7 @@
       db.settings.each((setting) => {
         console.log(setting)
       })
+      this.$store.dispatch('initialLoad');
     }
   }
 </script>
