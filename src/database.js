@@ -51,9 +51,22 @@ db.collections.count((count) => {
       icon: 'star',
       pinned: 'true'
     })
+    db.collections.put({
+      name: 'Devcord',
+      description: 'A friendly Webdev community',
+      colour: 'black',
+      icon: undefined,
+      pinned: 'false'
+    })
+    db.collections.put({
+      name: 'Markd.it',
+      description: 'The best bookmark manager',
+      colour: 'orange',
+      icon: undefined,
+      pinned: 'false'
+    })
 
     // Set initial data for tags (will also be removed later)
-
     db.tags.put({
       name: 'reads',
       icon: 'hash'
@@ -64,6 +77,22 @@ db.collections.count((count) => {
     })
     db.tags.put({
       name: 'news',
+      icon: 'hash'
+    })
+    db.tags.put({
+      name: 'design',
+      icon: 'hash'
+    })
+    db.tags.put({
+      name: 'coding',
+      icon: 'hash'
+    })
+    db.tags.put({
+      name: 'memes',
+      icon: 'hash'
+    })
+    db.tags.put({
+      name: 'cats',
       icon: 'hash'
     })
   }
