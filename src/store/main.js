@@ -38,32 +38,27 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    initialLoad: ({ commit }) => {
-      db.collections.where('pinned')
-        .equals('true')
-        .toArray()
-        .then(pinned => {
-          commit('setPinned', pinned)
-        }).catch(error => {
-          console.error("Couldn't load pinned", error)
-        })
+    async initialLoad ({ commit }) {
+      try {
+        let pinned = await db.collections.where('pinned').equals('true').toArray()
+        commit('setPinned', pinned)
+      } catch (err) {
+        console.error("Couldn't load pinned", err)
+      }
 
-      db.collections.where('pinned')
-        .equals('false')
-        .toArray()
-        .then(collections => {
-          commit('setCollections', collections)
-        }).catch(error => {
-          console.error("Couldn't load collections", error)
-        })
+      try {
+        let collections = await db.collections.where('pinned').equals('false').toArray()
+        commit('setCollections', collections)
+      } catch (err) {
+        console.error("Couldn't load collections", err)
+      }
 
-      db.tags
-        .toArray()
-        .then(tags => {
-          commit('setTags', tags)
-        }).catch(error => {
-          console.error("Couldn't load tags", error)
-        })
+      try {
+        let tags = await db.tags.toArray()
+        commit('setTags', tags)
+      } catch (err) {
+        console.error("Couldn't load tags", err)
+      }
     }
   }
 })
