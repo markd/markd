@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { title } from '../data'
+import db from '../database'
 
 Vue.use(Vuex)
 
@@ -8,23 +9,56 @@ export const store = new Vuex.Store({
   state: {
     title,
     pinned: [
-      { icon: 'book', name: 'All Bookmarks', active: true },
-      { icon: 'star', name: 'Favourite Bookmarks', active: false }
     ],
     collections: [
-      { colour: 'red', name: 'Web Development', active: false },
-      { colour: 'green', name: 'Spicy Memes', active: false },
-      { colour: 'black', name: 'Devcord', active: false },
-      { colour: 'orange', name: 'Markd.it', active: false }
     ],
     tags: [
-      { icon: 'hash', name: 'reads', active: false },
-      { icon: 'hash', name: 'blog', active: false },
-      { icon: 'hash', name: 'news', active: false },
-      { icon: 'hash', name: 'design', active: false },
-      { icon: 'hash', name: 'coding', active: false },
-      { icon: 'hash', name: 'memes', active: false },
-      { icon: 'hash', name: 'cats', active: false }
     ]
+  },
+  getters: {
+    getPinned: state => {
+      return state.pinned
+    },
+    getCollections: state => {
+      return state.collections
+    },
+    getTags: state => {
+      return state.tags
+    }
+  },
+  mutations: {
+    setPinned: (state, newPinned) => {
+      state.pinned = newPinned
+    },
+    setCollections: (state, newCollections) => {
+      state.collections = newCollections
+    },
+    setTags: (state, newTags) => {
+      state.tags = newTags
+    }
+  },
+  actions: {
+    async initialLoad ({ commit }) {
+      try {
+        let pinned = await db.collections.where('pinned').equals('true').toArray()
+        commit('setPinned', pinned)
+      } catch (err) {
+        console.error("Couldn't load pinned", err)
+      }
+
+      try {
+        let collections = await db.collections.where('pinned').equals('false').toArray()
+        commit('setCollections', collections)
+      } catch (err) {
+        console.error("Couldn't load collections", err)
+      }
+
+      try {
+        let tags = await db.tags.toArray()
+        commit('setTags', tags)
+      } catch (err) {
+        console.error("Couldn't load tags", err)
+      }
+    }
   }
 })

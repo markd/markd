@@ -28,6 +28,11 @@ const store = new Vuex.Store({
         colour: 'green',
         name: 'Spicy Memes'
       }]
+  },
+  getters: {
+    getPinned: state => {
+      return state.pinned
+    }
   }
 })
 

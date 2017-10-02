@@ -28,6 +28,7 @@
       }
     },
     created () {
+      this.$store.dispatch('initialLoad');
       db.settings.each((setting) => {
         console.log(setting)
       })

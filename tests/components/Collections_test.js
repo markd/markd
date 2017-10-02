@@ -28,6 +28,11 @@ const store = new Vuex.Store({
         colour: 'green',
         name: collectionTwo
       }]
+  },
+  getters: {
+    getCollections: state => {
+      return state.collections
+    }
   }
 })
 

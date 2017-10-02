@@ -18,9 +18,9 @@
     components: {
       SidebarItem
     },
-    data () {
-      return {
-        collections: this.$store.state.tags
+    computed: {
+      collections () {
+        return this.$store.getters.getTags
       }
     }
   }

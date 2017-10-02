@@ -14,9 +14,9 @@
     components: {
       SidebarItem
     },
-    data () {
-      return {
-        pinned: this.$store.state.pinned
+    computed: {
+      pinned () {
+        return this.$store.getters.getPinned
       }
     }
   }
