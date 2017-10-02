@@ -22,7 +22,7 @@ db.settings.put({
 // Set initial data for collections (will be removed later)
 db.collections.count((count) => {
   // Only insert test data if it hasn't been inserted yet
-  if (count !== 0) {
+  if (count === 0) {
     db.collections.put({
       name: 'Web Development',
       description: 'All Bookmarks about Webdev',
