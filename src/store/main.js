@@ -13,12 +13,18 @@ export const store = new Vuex.Store({
     ],
     collections: [
       { colour: 'red', name: 'Web Development', active: false },
-      { colour: 'green', name: 'Spicy Memes', active: false }
+      { colour: 'green', name: 'Spicy Memes', active: false },
+      { colour: 'black', name: 'Devcord', active: false },
+      { colour: 'orange', name: 'Markd.it', active: false }
     ],
     tags: [
       { icon: 'hash', name: 'reads', active: false },
       { icon: 'hash', name: 'blog', active: false },
-      { icon: 'hash', name: 'news', active: false }
+      { icon: 'hash', name: 'news', active: false },
+      { icon: 'hash', name: 'design', active: false },
+      { icon: 'hash', name: 'coding', active: false },
+      { icon: 'hash', name: 'memes', active: false },
+      { icon: 'hash', name: 'cats', active: false }
     ]
   }
 })
