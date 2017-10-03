@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { title } from '../data'
 import db from '../database'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
-    title,
+    title: 'markd',
     pinned: [
     ],
     collections: [
