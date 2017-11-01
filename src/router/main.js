@@ -12,11 +12,11 @@ const routes = [{
   component: AddView
 },
 {
-  path: '/tag/:tag',
+  path: '/tag/:id',
   component: TagView
 },
 {
-  path: '/collection/:collection',
+  path: '/collection/:id',
   component: CollectionView
 }
 ]

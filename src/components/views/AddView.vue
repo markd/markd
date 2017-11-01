@@ -1,12 +1,10 @@
 <template>
-  <span>AddView</span>
+  <span>Showing AddView</span>
 </template>
 
 <script>
   export default {
     name: 'AddView',
-    components: {
-    },
     computed: {
     }
   }
