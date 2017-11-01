@@ -2,11 +2,11 @@
   <div class="sidebar">
     <div class="sidebar__header">
       <h1 class="sidebar__title">{{ title }}</h1>
-      <button onclick="" class="sidebar__addBookmark">
+      <router-link to="/add" class="sidebar__addBookmark">
         <svg class="sidebar__addBookmarkIcon">
           <use xlink:href="#icon-plus" />
         </svg>
-      </button>
+      </router-link>
     </div>
     <div class="sidebar__content">
       <sidebar-group title="Pinned">
@@ -38,8 +38,7 @@
     },
     data () {
       return {
-        title: this.$store.state.title,
-        bookmarks: this.$store.state.bookmarks
+        title: this.$store.state.title
       }
     }
   }

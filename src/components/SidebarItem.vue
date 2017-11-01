@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar__groupItem" :class="{ 'sidebar__groupItem--active': collection.active }">
+  <router-link :to="`/${route}/${collection.key}`" class="sidebar__groupItem" :class="{ 'sidebar__groupItem--active': collection.active }">
     <svg v-if="isIcon" class="sidebar__groupItemIcon">
       <use :xlink:href="'#icon-' + collection.icon" />
     </svg>
@@ -7,13 +7,17 @@
       <use xlink:href="#icon-circle" />
     </svg>
     <div class="sidebar__groupItemName">{{ collection.name }}</div>
-  </div>
+  </router-link>
 </template>
 
 <script>
   export default {
     name: 'SidebarItem',
     props: {
+      route: {
+        type: String,
+        required: true
+      },
       collection: {
         type: Object,
         required: true
@@ -38,6 +42,8 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     padding: 8px 12px;
+    text-decoration: none;
+    display: block;
 
     &:hover {
       color: rgba(255, 255, 255, .75);

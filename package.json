@@ -37,6 +37,7 @@
     "reset-css": "^2.2.1",
     "serve-favicon": "^2.4.3",
     "vue": "^2.4.2",
+    "vue-router": "^3.0.1",
     "vuex": "^2.4.0"
   },
   "devDependencies": {

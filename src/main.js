@@ -3,6 +3,7 @@ import App from './App.vue'
 
 import './assets/scss/styles.scss'
 import { store } from './store/main'
+import { router } from './router/main'
 
 Vue.config.devtools = true
 Vue.config.productionTip = false
@@ -13,5 +14,6 @@ const app = new Vue({
   components: { App },
   el: '#app',
   template: '<App/>',
-  store
+  store,
+  router
 })
