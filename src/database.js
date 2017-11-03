@@ -22,20 +22,6 @@ db.settings.put({
 // Set initial data for collections (will be removed later)
 db.on('populate', () => {
   db.collections.put({
-    name: 'Web Development',
-    description: 'All Bookmarks about Webdev',
-    colour: 'red',
-    icon: undefined,
-    pinned: 'false'
-  })
-  db.collections.put({
-    name: 'Spicy Memes',
-    description: 'Only the best and freshest Memes',
-    colour: 'green',
-    icon: undefined,
-    pinned: 'false'
-  })
-  db.collections.put({
     name: 'All Bookmarks',
     description: 'All of your saved Bookmarks',
     colour: 'blue',
@@ -48,6 +34,20 @@ db.on('populate', () => {
     colour: undefined,
     icon: 'star',
     pinned: 'true'
+  })
+  db.collections.put({
+    name: 'Web Development',
+    description: 'All Bookmarks about Webdev',
+    colour: 'red',
+    icon: undefined,
+    pinned: 'false'
+  })
+  db.collections.put({
+    name: 'Spicy Memes',
+    description: 'Only the best and freshest Memes',
+    colour: 'green',
+    icon: undefined,
+    pinned: 'false'
   })
   db.collections.put({
     name: 'Devcord',
