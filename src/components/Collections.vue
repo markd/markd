@@ -4,7 +4,8 @@
       <sidebar-item
         v-for="(collection, i) in collections"
         :key="`collection-${i}`"
-        :collection="collection">
+        :collection="collection"
+        route="collection" >
       </sidebar-item>
     </div>
   </div>

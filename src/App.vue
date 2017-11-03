@@ -4,6 +4,7 @@
     <navigation />
     <sidebar />
     <main class="content">
+       <router-view></router-view>
     </main>
   </div>
 </template>
