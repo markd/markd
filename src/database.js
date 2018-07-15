@@ -93,6 +93,20 @@ db.on('populate', () => {
     name: 'cats',
     icon: 'hash'
   })
+
+  // Set initial data for items (will also be removed later)
+  db.items.put({
+    name: 'Google',
+    url: 'https://google.de',
+    collections: [1],
+    tags: [2]
+  })
+  db.items.put({
+    name: 'Markd.it',
+    url: 'https://markd.it',
+    collections: [1],
+    tags: [1]
+  })
 })
 
 export default db
