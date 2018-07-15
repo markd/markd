@@ -44,7 +44,7 @@ $ yarn serve:dev
  - dexie (for indexDB)
 
 ## About
-markd is made by the people of devcord
+markd is with love made by 
 [@redxtech], [@lostdesign], [@Dragory], & [@bdbch]
 
 [@redxtech]: https://github.com/redxtech
