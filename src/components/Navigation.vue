@@ -1,5 +1,5 @@
 <template>
-  <nav class="navigation">
+  <nav class="navigation" v-if="this.$route.path != '/add'">
     <div class="navigation__searchform">
       <input type="text" class="navigation__searchformInput" placeholder="Search" />
     </div>
@@ -47,9 +47,5 @@
     padding: 8px;
     width: 100%;
     font-size: 14px;
-  }
-
-  .filterOptions {
-
   }
 </style>
