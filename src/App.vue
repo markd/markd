@@ -59,5 +59,6 @@
     grid-area: content;
     min-height: 100vh;
     overflow: auto;
+    padding: 2rem;
   }
 </style>
