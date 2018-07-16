@@ -98,7 +98,7 @@ db.on('populate', () => {
   db.items.put({
     name: 'Google',
     url: 'https://google.de',
-    collections: [1],
+    collections: [2],
     tags: [2]
   })
   db.items.put({
