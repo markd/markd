@@ -13,7 +13,7 @@
     name: 'CollectionView',
     computed: {
       items() {
-        return this.$store.getters.getItems(this.$route.params.id)
+        return this.$store.getters.getItemsById(this.$route.params.id)
       }
     }
   }
