@@ -17,23 +17,23 @@
   import Icons from './components/Icons.vue'
 
   export default {
+    name: 'App',
     components: {
       Sidebar,
       Navigation,
       Icons
     },
-    name: 'App',
     data () {
       return {
         //
       }
     },
     created () {
-      this.$store.dispatch('initialLoad');
+      this.$store.dispatch('initialLoad')
       db.settings.each((setting) => {
         console.log(setting)
       })
-      this.$store.dispatch('initialLoad');
+      this.$store.dispatch('initialLoad')
     }
   }
 </script>
