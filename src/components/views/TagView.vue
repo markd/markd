@@ -8,12 +8,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'TagView',
-    computed: {
-      items() {
-        return this.$store.getters.getItemsByTag(this.$route.params.id)
-      }
+export default {
+  name: 'TagView',
+  computed: {
+    items() {
+      return this.$store.getters.getItemsByTag(this.$route.params.id)
     }
   }
+}
 </script>

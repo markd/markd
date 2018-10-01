@@ -9,21 +9,20 @@
 </template>
 
 <script>
-  export default {
-    name: 'CollectionView',
-    computed: {
-      items() {
-        return this.$store.getters.getItemsById(this.$route.params.id)
-      }
+export default {
+  name: 'CollectionView',
+  computed: {
+    items() {
+      return this.$store.getters.getItemsById(this.$route.params.id)
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  a {
-    display:block;
-    text-decoration: none;
-    margin-bottom: 1rem
-  }
+a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
 </style>
-

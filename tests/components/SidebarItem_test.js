@@ -8,22 +8,26 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     title: 'markd',
-    pinned: [{
-      icon: 'cloud_queue',
-      name: 'All Bookmarks'
-    },
-    {
-      icon: 'favorite_border',
-      name: 'Favourite Bookmarks'
-    }],
-    collections: [{
-      colour: 'red',
-      name: 'Web Development'
-    },
-    {
-      colour: 'green',
-      name: 'Spicy Memes'
-    }]
+    pinned: [
+      {
+        icon: 'cloud_queue',
+        name: 'All Bookmarks'
+      },
+      {
+        icon: 'favorite_border',
+        name: 'Favourite Bookmarks'
+      }
+    ],
+    collections: [
+      {
+        colour: 'red',
+        name: 'Web Development'
+      },
+      {
+        colour: 'green',
+        name: 'Spicy Memes'
+      }
+    ]
   }
 })
 
@@ -58,7 +62,8 @@ test('component displays right title', t => {
   }).$mount()
 
   Vue.nextTick(() => {
-    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemIcon')[0].textContent
+    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemIcon')[0]
+      .textContent
 
     t.is(icon, 'cloud')
   })
@@ -76,7 +81,8 @@ test('component displays right style', t => {
   }).$mount()
 
   Vue.nextTick(() => {
-    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemIcon')[0].style
+    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemIcon')[0]
+      .style
 
     t.is(icon, 'color: red')
   })
@@ -94,7 +100,8 @@ test('component displays right name', t => {
   }).$mount()
 
   Vue.nextTick(() => {
-    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemName')[0].textContent
+    let icon = sidebarItem.$el.querySelectorAll('.sidebar__groupItemName')[0]
+      .textContent
 
     t.is(icon, 'Some Folder')
   })

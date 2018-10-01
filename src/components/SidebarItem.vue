@@ -11,64 +11,66 @@
 </template>
 
 <script>
-  export default {
-    name: 'SidebarItem',
-    props: {
-      route: {
-        type: String,
-        required: true
-      },
-      collection: {
-        type: Object,
-        required: true
-      }
+export default {
+  name: 'SidebarItem',
+  props: {
+    route: {
+      type: String,
+      required: true
     },
-    computed: {
-      isIcon () {
-        return !!this.collection.icon
-      },
-      style () {
-        return this.collection.colour ? `color: ${this.collection.colour};` : 'color: slategrey;'
-      }
+    collection: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    isIcon() {
+      return !!this.collection.icon
+    },
+    style() {
+      return this.collection.colour
+        ? `color: ${this.collection.colour};`
+        : 'color: slategrey;'
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .sidebar__groupItem {
-    color: rgba(255, 255, 255, .45);
-    cursor: pointer;
-    user-select: none;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    padding: 8px 12px;
-    text-decoration: none;
-    display: block;
+.sidebar__groupItem {
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  user-select: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
 
-    &:hover {
-      color: rgba(255, 255, 255, .75);
-      background: var(--sidebar-color-hover);
-    }
-
-    &--active,
-    &--active:hover {
-      color: var(--sidebar-color-active-text);
-      background: var(--sidebar-color-active);
-    }
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+    background: var(--sidebar-color-hover);
   }
 
-  .sidebar__groupItemIcon {
-    color: var(--sidebar-icon-color);
-    height: 16px;
-    vertical-align: middle;
-    width: 16px;
-    margin-right: 4px;
+  &--active,
+  &--active:hover {
+    color: var(--sidebar-color-active-text);
+    background: var(--sidebar-color-active);
   }
+}
 
-  .sidebar__groupItemName {
-    display: inline;
-    font-size: 14px;
-    line-height: 1;
-    vertical-align: middle;
-  }
+.sidebar__groupItemIcon {
+  color: var(--sidebar-icon-color);
+  height: 16px;
+  vertical-align: middle;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.sidebar__groupItemName {
+  display: inline;
+  font-size: 14px;
+  line-height: 1;
+  vertical-align: middle;
+}
 </style>

@@ -16,7 +16,8 @@ const store = new Vuex.Store({
       {
         icon: 'favorite_border',
         name: 'Favourite Bookmarks'
-      }],
+      }
+    ],
     collections: [
       {
         colour: 'red',
@@ -25,7 +26,8 @@ const store = new Vuex.Store({
       {
         colour: 'green',
         name: 'Spicy Memes'
-      }]
+      }
+    ]
   }
 })
 
@@ -54,8 +56,8 @@ test('component displays right title', t => {
   }).$mount()
 
   Vue.nextTick(() => {
-    let title = sidebarGroup.$el.querySelectorAll(
-      '.sidebarGroup__title')[0].textContent
+    let title = sidebarGroup.$el.querySelectorAll('.sidebarGroup__title')[0]
+      .textContent
 
     t.is(title, 'test')
   })

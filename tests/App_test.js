@@ -8,22 +8,26 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     title: 'markd',
-    pinned: [{
-      icon: 'cloud_queue',
-      name: 'All Bookmarks'
-    },
-    {
-      icon: 'favorite_border',
-      name: 'Favourite Bookmarks'
-    }],
-    collections: [{
-      colour: 'red',
-      name: 'Web Development'
-    },
-    {
-      colour: 'green',
-      name: 'Spicy Memes'
-    }]
+    pinned: [
+      {
+        icon: 'cloud_queue',
+        name: 'All Bookmarks'
+      },
+      {
+        icon: 'favorite_border',
+        name: 'Favourite Bookmarks'
+      }
+    ],
+    collections: [
+      {
+        colour: 'red',
+        name: 'Web Development'
+      },
+      {
+        colour: 'green',
+        name: 'Spicy Memes'
+      }
+    ]
   }
 })
 

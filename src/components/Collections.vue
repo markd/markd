@@ -12,17 +12,17 @@
 </template>
 
 <script>
-  import SidebarItem from './SidebarItem.vue'
+import SidebarItem from './SidebarItem.vue'
 
-  export default {
-    name: 'Collections',
-    components: {
-      SidebarItem
-    },
-    computed: {
-      collections () {
-        return this.$store.getters.getCollections
-      }
+export default {
+  name: 'Collections',
+  components: {
+    SidebarItem
+  },
+  computed: {
+    collections() {
+      return this.$store.getters.getCollections
     }
   }
+}
 </script>

@@ -11,6 +11,8 @@ export default {
   getItems: state => {
     return state.items
   },
-  getItemsById: state => id => state.items.filter(item => item.collections.includes(Number(id))),
-  getItemsByTag: state => id => state.items.filter(item => item.tags.includes(Number(id)))
+  getItemsById: state => id =>
+    state.items.filter(item => item.collections.includes(Number(id))),
+  getItemsByTag: state => id =>
+    state.items.filter(item => item.tags.includes(Number(id)))
 }

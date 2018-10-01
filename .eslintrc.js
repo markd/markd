@@ -9,13 +9,12 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
+    'plugin:prettier/recommended'
   ],
-  plugins: [
-    'vue'
-  ],
-  'rules': {
+  plugins: ['vue', 'prettier'],
+  rules: {
     indent: 0,
-    'indent-legacy': ['error', 2],
+    'indent-legacy': ['error', 2]
   }
 }
