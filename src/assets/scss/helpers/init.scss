@@ -1,9 +1,13 @@
 // Font imports
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400|Source+Sans+Pro:300,400');
 
+
+$main-color: #ff7800;
+
 // Variables
 :root {
   --font-stack: 'Roboto', BlinkMacSystemFont, -apple-system, "Oxygen", "Ubuntu", "Fira Sans", "Helvetica", "Arial", sans-serif;
+  --main-color: #{$main-color};
 
   .light {
     // Light theme variables
@@ -22,6 +26,8 @@
     --sidebar-color-active-text: #fff;
     --overlay: rgba(0, 0, 0, .25);
     --overlay-hover: rgba(0, 0, 0, .65);
+    --tag-chip-color: black;
+    --tag-chip-selected-color: #{$main-color};
   }
 
   .dark {
