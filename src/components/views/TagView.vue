@@ -11,7 +11,7 @@
   export default {
     name: 'TagView',
     computed: {
-      items() {
+      items () {
         return this.$store.getters.getItemsByTag(this.$route.params.id)
       }
     }
