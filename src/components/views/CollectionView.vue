@@ -12,7 +12,7 @@
   export default {
     name: 'CollectionView',
     computed: {
-      items() {
+      items () {
         return this.$store.getters.getItemsById(this.$route.params.id)
       }
     }
@@ -26,4 +26,3 @@
     margin-bottom: 1rem
   }
 </style>
-
