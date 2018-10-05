@@ -7,18 +7,19 @@ import CollectionView from '../components/views/CollectionView.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-  path: '/add',
-  component: AddView
-},
-{
-  path: '/tag/:id',
-  component: TagView
-},
-{
-  path: '/collection/:id',
-  component: CollectionView
-}
+const routes = [
+  {
+    path: '/add',
+    component: AddView
+  },
+  {
+    path: '/tag/:id',
+    component: TagView
+  },
+  {
+    path: '/collection/:id',
+    component: CollectionView
+  }
 ]
 
 export const router = new VueRouter({

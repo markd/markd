@@ -1,18 +1,22 @@
 import db from '../database'
 
 export default {
-  async initialLoad ({
-    commit
-  }) {
+  async initialLoad({ commit }) {
     try {
-      let collections = await db.collections.where('pinned').equals('false').toArray()
+      let collections = await db.collections
+        .where('pinned')
+        .equals('false')
+        .toArray()
       commit('setCollections', collections)
     } catch (err) {
       console.error("Couldn't load collections", err)
     }
 
     try {
-      let pinned = await db.collections.where('pinned').equals('true').toArray()
+      let pinned = await db.collections
+        .where('pinned')
+        .equals('true')
+        .toArray()
       commit('setPinned', pinned)
     } catch (err) {
       console.error("Couldn't load pinned", err)

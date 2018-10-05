@@ -18,7 +18,8 @@ const store = new Vuex.Store({
       {
         icon: 'favorite_border',
         name: collectionTwo
-      }],
+      }
+    ],
     collections: [
       {
         colour: 'red',
@@ -27,7 +28,8 @@ const store = new Vuex.Store({
       {
         colour: 'green',
         name: 'Spicy Memes'
-      }]
+      }
+    ]
   },
   getters: {
     getPinned: state => {
@@ -55,14 +57,18 @@ test('Pinned component shows proper children', t => {
   }).$mount()
 
   let componentElementsOne = pinned.$el.querySelectorAll(
-    '.sidebar__groupItem')[0]
+    '.sidebar__groupItem'
+  )[0]
   let componentElementsTwo = pinned.$el.querySelectorAll(
-    '.sidebar__groupItem')[1]
+    '.sidebar__groupItem'
+  )[1]
 
   let collectionNameOne = componentElementsOne.querySelectorAll(
-    '.sidebar__groupItemName')[0].textContent
+    '.sidebar__groupItemName'
+  )[0].textContent
   let collectionNameTwo = componentElementsTwo.querySelectorAll(
-    '.sidebar__groupItemName')[0].textContent
+    '.sidebar__groupItemName'
+  )[0].textContent
 
   t.is(collectionNameOne, collectionOne)
   t.is(collectionNameTwo, collectionTwo)

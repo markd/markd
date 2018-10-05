@@ -7,17 +7,17 @@
 </template>
 
 <script>
-  import SidebarItem from './SidebarItem.vue'
+import SidebarItem from './SidebarItem.vue'
 
-  export default {
-    name: 'Pinned',
-    components: {
-      SidebarItem
-    },
-    computed: {
-      pinned () {
-        return this.$store.getters.getPinned
-      }
+export default {
+  name: 'Pinned',
+  components: {
+    SidebarItem
+  },
+  computed: {
+    pinned() {
+      return this.$store.getters.getPinned
     }
   }
+}
 </script>

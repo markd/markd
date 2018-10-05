@@ -23,18 +23,18 @@
 </template>
 
 <style lang="scss" scoped>
-  .icons {
-    height: 1px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: -1;
-  }
+.icons {
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
 </style>
 
 <script>
-  export default {
-    name: 'Icons'
-  }
+export default {
+  name: 'Icons'
+}
 </script>

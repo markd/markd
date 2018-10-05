@@ -10,14 +10,10 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     title: 'markd',
-    pinned: [
-    ],
-    collections: [
-    ],
-    tags: [
-    ],
-    items: [
-    ]
+    pinned: [],
+    collections: [],
+    tags: [],
+    items: []
   },
   getters: getters,
   mutations: mutations,
