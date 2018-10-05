@@ -12,9 +12,9 @@
 <script>
 import db from './database'
 
-import Sidebar from './components/Sidebar.vue'
-import Navigation from './components/Navigation.vue'
-import Icons from './components/Icons.vue'
+import Sidebar from './components/Sidebar'
+import Navigation from './components/Navigation'
+import Icons from './components/Icons'
 
 export default {
   name: 'App',

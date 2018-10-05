@@ -9,36 +9,66 @@
       </router-link>
     </div>
     <div class="sidebar__content">
-      <sidebar-group title="Pinned">
-        <pinned></pinned>
+      <sidebar-group>
+        <sidebar-navigation></sidebar-navigation>
+      </sidebar-group>
+      <sidebar-group title="Pinned" v-if="pinnedItems.length > 0">
+        <pinned :items="pinnedItems"></pinned>
       </sidebar-group>
       <sidebar-group title="Collections">
-        <collections></collections>
+        <collections :items="collectionItems"></collections>
+        <add label="Add Collection" :value="collectionInput" @input="setCollectionInput" />
       </sidebar-group>
       <sidebar-group title="Tags">
-        <tags></tags>
+        <tags :items="tagItems"></tags>
+        <add label="Add Tag" :value="tagInput" @input="setTagInput" />
       </sidebar-group>
     </div>
   </div>
 </template>
 
 <script>
-import Pinned from './Pinned.vue'
-import Collections from './Collections.vue'
-import Tags from './Tags.vue'
-import SidebarGroup from './SidebarGroup.vue'
-// noinspection JSUnusedGlobalSymbols
+import Add from './Add'
+import Pinned from './Pinned'
+import Collections from './Collections'
+import Tags from './Tags'
+import SidebarGroup from './Group'
+import SidebarNavigation from './Navigation'
+
 export default {
   name: 'Sidebar',
   components: {
-    SidebarGroup,
-    Pinned,
+    Add,
     Collections,
+    Pinned,
+    SidebarGroup,
+    SidebarNavigation,
     Tags
   },
   data() {
     return {
-      title: this.$store.state.title
+      title: this.$store.state.title,
+      collectionInput: '',
+      tagInput: ''
+    }
+  },
+  computed: {
+    pinnedItems() {
+      return this.$store.getters.getPinned
+    },
+    collectionItems() {
+      return this.$store.getters.getCollections
+    },
+    tagItems() {
+      return this.$store.getters.getTags
+    }
+  },
+  methods: {
+    setCollectionInput: function(val) {
+      this.collectionInput = val
+    },
+    setTagInput: function(val) {
+      this.tagInput = val
     }
   }
 }
@@ -46,7 +76,6 @@ export default {
 
 <style lang="scss">
 .sidebar {
-  border-right: 1px solid #333;
   grid-area: sidebar;
   min-height: 100vh;
   background: var(--sidebar-color);
