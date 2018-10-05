@@ -61,4 +61,12 @@ export default {
   overflow: auto;
   padding: 2rem;
 }
+
+::-webkit-input-placeholder,
+:-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder {
+  color: #fff;
+}
 </style>

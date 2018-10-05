@@ -28,7 +28,10 @@ export default {
 <style lang="scss" scoped>
 .add {
   &__input {
+    background: transparent;
     border: 0;
+    color: #fff;
+    cursor: pointer;
     display: block;
     outline: 0;
     padding: 8px 12px;
