@@ -1,6 +1,12 @@
 <template>
   <div class="add">
-    <input class="add__input" :placeholder="label" v-on:keyup="updateValue" />
+    <input
+      class="add__input"
+      :placeholder="label"
+      v-on:keyup="updateValue"
+      v-on:blur="resetValue"
+      ref="input"
+    />
   </div>
 </template>
 
@@ -20,6 +26,10 @@ export default {
   methods: {
     updateValue: function(e) {
       this.$emit('input', e.currentTarget.value)
+    },
+    resetValue: function() {
+      this.$emit('reset')
+      this.$refs.input.value = ''
     }
   }
 }

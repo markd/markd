@@ -17,11 +17,21 @@
       </sidebar-group>
       <sidebar-group title="Collections">
         <collections :items="collectionItems"></collections>
-        <add label="Add Collection" :value="collectionInput" @input="setCollectionInput" />
+        <add
+          label="Add Collection"
+          :value="collectionInput"
+          @input="setCollectionInput"
+          @reset="resetCollectionInput"
+        />
       </sidebar-group>
       <sidebar-group title="Tags">
         <tags :items="tagItems"></tags>
-        <add label="Add Tag" :value="tagInput" @input="setTagInput" />
+        <add
+          label="Add Tag"
+          :value="tagInput"
+          @input="setTagInput"
+          @reset="resetTagInput"
+        />
       </sidebar-group>
     </div>
   </div>
@@ -67,8 +77,14 @@ export default {
     setCollectionInput: function(val) {
       this.collectionInput = val
     },
+    resetCollectionInput: function() {
+      this.collectionInput = ''
+    },
     setTagInput: function(val) {
       this.tagInput = val
+    },
+    resetTagInput: function() {
+      this.tagInput = ''
     }
   }
 }
