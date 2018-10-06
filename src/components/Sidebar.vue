@@ -45,11 +45,6 @@ export default {
   computed: {
     strings() {
       const language = this.$store.getters.language
-      console.log({
-        pinned: __('Pinned', language),
-        tags: __('Tags', language),
-        collections: __('Collections', language)
-      })
       return {
         pinned: __('Pinned', language),
         tags: __('Tags', language),
