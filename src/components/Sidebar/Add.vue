@@ -1,5 +1,5 @@
 <template>
-  <div class="add">
+  <form class="add" v-on:submit="submitValue">
     <input
       class="add__input"
       :placeholder="label"
@@ -7,7 +7,7 @@
       v-on:blur="resetValue"
       ref="input"
     />
-  </div>
+  </form>
 </template>
 
 <script>
@@ -30,6 +30,11 @@ export default {
     resetValue: function() {
       this.$emit('reset')
       this.$refs.input.value = ''
+    },
+    submitValue: function(e) {
+      e.preventDefault()
+      this.$emit('submit', this.$refs.input.value)
+      this.resetValue()
     }
   }
 }

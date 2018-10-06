@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__group collections">
     <div class="sidebar__groupItems">
-      <sidebar-item v-for="(collection, i) in collections" :key="`collection-${i}`" :route="`collection/${collection.id}`">{{ collection.name }}</sidebar-item>
+      <sidebar-item v-for="(collection, i) in items" :key="`collection-${collection.key}`" :route="`collection/${collection.key}`">{{ collection.name }}</sidebar-item>
     </div>
   </div>
 </template>

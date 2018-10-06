@@ -22,6 +22,7 @@
           :value="collectionInput"
           @input="setCollectionInput"
           @reset="resetCollectionInput"
+          @submit="createNewCollection"
         />
       </sidebar-group>
       <sidebar-group title="Tags">
@@ -31,6 +32,7 @@
           :value="tagInput"
           @input="setTagInput"
           @reset="resetTagInput"
+          @submit="createNewTag"
         />
       </sidebar-group>
     </div>
@@ -38,6 +40,7 @@
 </template>
 
 <script>
+import db from '../../database'
 import Add from './Add'
 import Pinned from './Pinned'
 import Collections from './Collections'
@@ -64,13 +67,13 @@ export default {
   },
   computed: {
     pinnedItems() {
-      return this.$store.getters.getPinned
+      return this.$store.getters.getPinned.sort((a, b) => a.name > b.name)
     },
     collectionItems() {
-      return this.$store.getters.getCollections
+      return this.$store.getters.getCollections.sort((a, b) => a.name > b.name)
     },
     tagItems() {
-      return this.$store.getters.getTags
+      return this.$store.getters.getTags.sort((a, b) => a.name > b.name)
     }
   },
   methods: {
@@ -80,11 +83,28 @@ export default {
     resetCollectionInput: function() {
       this.collectionInput = ''
     },
+    createNewCollection: function() {
+      db.collections.put({
+        colour: '#fff',
+        description: '',
+        icon: '',
+        name: this.collectionInput,
+        pinned: 0
+      })
+      this.$store.dispatch('loadCollections')
+    },
     setTagInput: function(val) {
       this.tagInput = val
     },
     resetTagInput: function() {
       this.tagInput = ''
+    },
+    createNewTag: function() {
+      db.tags.put({
+        name: this.tagInput,
+        icon: ''
+      })
+      this.$store.dispatch('loadTags')
     }
   }
 }

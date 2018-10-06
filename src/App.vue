@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import db from './database'
-
 import Sidebar from './components/Sidebar'
 import Navigation from './components/Navigation'
 import Icons from './components/Icons'
@@ -29,10 +27,6 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch('initialLoad')
-    db.settings.each(setting => {
-      console.log(setting)
-    })
     this.$store.dispatch('initialLoad')
   }
 }
