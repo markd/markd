@@ -1,6 +1,6 @@
 <template>
   <div class="add-view--content">
-    <label>Add a new bookmark</label>
+    <label>{{strings.addNewBookmark}}</label>
     <form action="">
       <input type="text" placeholder="https://markd.it" v-model="newUrl">
       <button @click.prevent="addNewBookmark">mark it</button>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import __ from '../../lib/translation'
+
 export default {
   name: 'AddView',
   data() {
@@ -21,7 +23,14 @@ export default {
       console.log(this.newUrl)
     }
   },
-  computed: {}
+  computed: {
+    strings() {
+      const lang = this.$store.getters.language
+      return {
+        addNewBookmark: __('Add a new bookmark', lang)
+      }
+    }
+  }
 }
 </script>
 

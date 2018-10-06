@@ -1,7 +1,25 @@
 import db from '../database'
 
+async function getLanguage(commit) {
+  try {
+    let lang = await db.settings
+      .where('name')
+      .equals('lang')
+      .toArray()
+
+    commit('setLanguage', lang[0].value)
+  } catch (err) {
+    console.error("Couldn't load language", err)
+  }
+}
+
 export default {
+  async loadLanguage({ commit }) {
+    getLanguage(commit)
+  },
   async initialLoad({ commit }) {
+    await getLanguage(commit)
+
     try {
       let collections = await db.collections
         .where('pinned')

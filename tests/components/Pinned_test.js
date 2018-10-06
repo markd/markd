@@ -32,7 +32,7 @@ const store = new Vuex.Store({
     ]
   },
   getters: {
-    getPinned: state => {
+    pinned: state => {
       return state.pinned
     }
   }

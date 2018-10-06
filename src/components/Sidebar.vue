@@ -9,13 +9,13 @@
       </router-link>
     </div>
     <div class="sidebar__content">
-      <sidebar-group title="Pinned">
+      <sidebar-group :title="strings.pinned">
         <pinned></pinned>
       </sidebar-group>
-      <sidebar-group title="Collections">
+      <sidebar-group :title="strings.collections">
         <collections></collections>
       </sidebar-group>
-      <sidebar-group title="Tags">
+      <sidebar-group :title="strings.tags">
         <tags></tags>
       </sidebar-group>
     </div>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import __ from '../lib/translation'
 import Pinned from './Pinned.vue'
 import Collections from './Collections.vue'
 import Tags from './Tags.vue'
@@ -39,6 +40,21 @@ export default {
   data() {
     return {
       title: this.$store.state.title
+    }
+  },
+  computed: {
+    strings() {
+      const language = this.$store.getters.language
+      console.log({
+        pinned: __('Pinned', language),
+        tags: __('Tags', language),
+        collections: __('Collections', language)
+      })
+      return {
+        pinned: __('Pinned', language),
+        tags: __('Tags', language),
+        collections: __('Collections', language)
+      }
     }
   }
 }

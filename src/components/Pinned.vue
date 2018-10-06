@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     pinned() {
-      return this.$store.getters.getPinned
+      return this.$store.getters.pinned
     }
   }
 }

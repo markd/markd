@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     collections() {
-      return this.$store.getters.getTags
+      return this.$store.getters.tags
     }
   }
 }

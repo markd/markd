@@ -13,7 +13,8 @@ export const store = new Vuex.Store({
     pinned: [],
     collections: [],
     tags: [],
-    items: []
+    items: [],
+    language: 'en'
   },
   getters: getters,
   mutations: mutations,

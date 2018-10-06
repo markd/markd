@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     collections() {
-      return this.$store.getters.getCollections
+      return this.$store.getters.collections
     }
   }
 }

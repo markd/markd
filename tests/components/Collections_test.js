@@ -32,7 +32,7 @@ const store = new Vuex.Store({
     ]
   },
   getters: {
-    getCollections: state => {
+    collections: state => {
       return state.collections
     }
   }

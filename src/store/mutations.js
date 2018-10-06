@@ -10,5 +10,8 @@ export default {
   },
   setItems: (state, newItems) => {
     state.items = newItems
+  },
+  setLanguage: (state, newLanguage) => {
+    state.language = newLanguage
   }
 }
