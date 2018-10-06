@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation" v-if="this.$route.path != '/add'">
     <div class="navigation__searchform">
-      <input type="text" class="navigation__searchformInput" placeholder="Search" />
+      <input type="text" class="navigation__searchformInput" :placeholder="strings.search" />
     </div>
     <div class="filterOptions">
       <button class="filterOptions__option">
@@ -12,12 +12,21 @@
 </template>
 
 <script>
+import __ from '../lib/translation'
+
 export default {
   name: 'Navigation',
   data() {
     return {
       title: this.$store.state.viewTitle || 'Navigation Title',
       groups: this.$store.state.groups
+    }
+  },
+  computed: {
+    strings() {
+      return {
+        search: __('Search', this.$store.getters.language)
+      }
     }
   }
 }
