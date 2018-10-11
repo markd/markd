@@ -2,7 +2,9 @@
   <div class="sidebar">
     <div class="sidebar__header">
       <h1 class="sidebar__title">{{ title }}</h1>
-      <router-link to="/add" class="sidebar__addBookmark">
+      <router-link 
+        to="/add" 
+        class="sidebar__addBookmark">
         <svg class="sidebar__addBookmarkIcon">
           <use xlink:href="#icon-plus" />
         </svg>
@@ -10,13 +12,13 @@
     </div>
     <div class="sidebar__content">
       <sidebar-group title="Pinned">
-        <pinned></pinned>
+        <pinned/>
       </sidebar-group>
       <sidebar-group title="Collections">
-        <collections></collections>
+        <collections/>
       </sidebar-group>
       <sidebar-group title="Tags">
-        <tags></tags>
+        <tags/>
       </sidebar-group>
     </div>
   </div>

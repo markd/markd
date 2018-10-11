@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarItem.vue renders 1`] = `
+<router-link-stub to="/folder/file" tag="a" event="click" class="sidebar__groupItem"><svg class="sidebar__groupItemIcon">
+    <use xlink:href="#icon-folder"></use>
+  </svg>
+  <div class="sidebar__groupItemName">Some Folder</div>
+</router-link-stub>
+`;

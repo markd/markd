@@ -7,14 +7,10 @@ module.exports = {
   env: {
     browser: true
   },
-  extends: [
-    'standard',
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended'
-  ],
-  plugins: ['vue', 'prettier'],
+  extends: ['standard', 'plugin:vue/recommended', '@vue/prettier'],
   rules: {
     indent: 0,
-    'indent-legacy': ['error', 2]
+    'indent-legacy': ['error', 2],
+    'no-console': 1
   }
 }

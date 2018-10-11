@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarGroup.vue renders 1`] = `
+<div class="sidebarGroup">
+  <h2 class="sidebarGroup__title">test</h2>
+  <div class="sidebarGroup__content"></div>
+</div>
+`;

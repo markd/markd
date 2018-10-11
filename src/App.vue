@@ -1,17 +1,17 @@
 <template>
-  <div id="app" class="light">
+  <div 
+    id="app" 
+    class="light">
     <icons />
     <navigation />
     <sidebar />
     <main class="content">
-       <router-view></router-view>
+      <router-view/>
     </main>
   </div>
 </template>
 
 <script>
-import db from './database'
-
 import Sidebar from './components/Sidebar.vue'
 import Navigation from './components/Navigation.vue'
 import Icons from './components/Icons.vue'
@@ -30,9 +30,6 @@ export default {
   },
   created() {
     this.$store.dispatch('initialLoad')
-    db.settings.each(setting => {
-      console.log(setting)
-    })
     this.$store.dispatch('initialLoad')
   }
 }

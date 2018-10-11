@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation.vue renders 1`] = `
+<nav class="navigation">
+  <div class="navigation__searchform"><input type="text" placeholder="Search" class="navigation__searchformInput"></div>
+  <div class="filterOptions"><button class="filterOptions__option">
+      List
+    </button></div>
+</nav>
+`;

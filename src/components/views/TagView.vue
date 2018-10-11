@@ -2,7 +2,10 @@
   <div>
     <span>Showing TagView for id {{ $route.params.id }}</span>
     <template v-for="item in items">
-      <a :href="item.url" :key="item.key" target="_blank">{{item.name}}</a>
+      <a 
+        :href="item.url" 
+        :key="item.key" 
+        target="_blank">{{ item.name }}</a>
     </template>
   </div>
 </template>
