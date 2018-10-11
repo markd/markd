@@ -8,12 +8,8 @@ import { router } from './router/router'
 Vue.config.devtools = true
 Vue.config.productionTip = false
 
-/* eslint-disable no-unused-vars */
-// noinspection JSUnusedLocalSymbols
-const app = new Vue({
-  components: { App },
-  el: '#app',
-  template: '<App/>',
+new Vue({
+  router,
   store,
-  router
-})
+  render: h => h(App)
+}).$mount('#app')

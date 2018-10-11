@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pinned.vue renders 1`] = `
+<div class="sidebar__group pinned">
+  <div class="sidebar__groupItems">
+    <sidebaritem-stub route="collection" collection="[object Object]"></sidebaritem-stub>
+    <sidebaritem-stub route="collection" collection="[object Object]"></sidebaritem-stub>
+  </div>
+</div>
+`;

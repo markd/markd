@@ -1,7 +1,12 @@
 <template>
-  <nav class="navigation" v-if="this.$route.path != '/add'">
+  <nav 
+    v-if="this.$route.path != '/add'" 
+    class="navigation">
     <div class="navigation__searchform">
-      <input type="text" class="navigation__searchformInput" placeholder="Search" />
+      <input 
+        type="text" 
+        class="navigation__searchformInput" 
+        placeholder="Search" >
     </div>
     <div class="filterOptions">
       <button class="filterOptions__option">

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar.vue renders 1`] = `
+<div class="sidebar">
+  <div class="sidebar__header">
+    <h1 class="sidebar__title">markd</h1>
+    <router-link-stub to="/add" tag="a" event="click" class="sidebar__addBookmark"><svg class="sidebar__addBookmarkIcon">
+        <use xlink:href="#icon-plus"></use>
+      </svg></router-link-stub>
+  </div>
+  <div class="sidebar__content">
+    <sidebargroup-stub title="Pinned">
+      <pinned-stub></pinned-stub>
+    </sidebargroup-stub>
+    <sidebargroup-stub title="Collections">
+      <collections-stub></collections-stub>
+    </sidebargroup-stub>
+    <sidebargroup-stub title="Tags">
+      <tags-stub></tags-stub>
+    </sidebargroup-stub>
+  </div>
+</div>
+`;

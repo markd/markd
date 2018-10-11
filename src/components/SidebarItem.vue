@@ -1,9 +1,17 @@
 <template>
-  <router-link :to="`/${route}/${collection.key}`" class="sidebar__groupItem" :class="{ 'sidebar__groupItem--active': collection.active }">
-    <svg v-if="isIcon" class="sidebar__groupItemIcon">
+  <router-link 
+    :to="`/${route}/${collection.key}`" 
+    :class="{ 'sidebar__groupItem--active': collection.active }" 
+    class="sidebar__groupItem">
+    <svg 
+      v-if="isIcon" 
+      class="sidebar__groupItemIcon">
       <use :xlink:href="'#icon-' + collection.icon" />
     </svg>
-    <svg v-else class="sidebar__groupItemIcon" :style="this.style">
+    <svg 
+      v-else 
+      :style="style" 
+      class="sidebar__groupItemIcon">
       <use xlink:href="#icon-circle" />
     </svg>
     <div class="sidebar__groupItemName">{{ collection.name }}</div>

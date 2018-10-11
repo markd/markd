@@ -2,7 +2,10 @@
   <div class="add-view--content">
     <label>Add a new bookmark</label>
     <form action="">
-      <input type="text" placeholder="https://markd.it" v-model="newUrl">
+      <input 
+        v-model="newUrl" 
+        type="text" 
+        placeholder="https://markd.it">
       <button @click.prevent="addNewBookmark">mark it</button>
     </form>
   </div>
@@ -16,12 +19,12 @@ export default {
       newUrl: ''
     }
   },
+  computed: {},
   methods: {
     addNewBookmark() {
       console.log(this.newUrl)
     }
-  },
-  computed: {}
+  }
 }
 </script>
 

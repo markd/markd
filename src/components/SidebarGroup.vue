@@ -1,17 +1,23 @@
 <template>
   <div class="sidebarGroup">
-    <h2 class="sidebarGroup__title" v-text="title"></h2>
+    <h2 
+      class="sidebarGroup__title" 
+      v-text="title"/>
     <div class="sidebarGroup__content">
-      <slot></slot>
+      <slot/>
     </div>
   </div>
 </template>
 
 <script>
-// noinspection JSUnusedGlobalSymbols
 export default {
   name: 'SidebarGroup',
-  props: ['title']
+  props: {
+    title: {
+      default: '',
+      type: String
+    }
+  }
 }
 </script>
 
