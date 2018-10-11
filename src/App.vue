@@ -56,7 +56,6 @@ export default {
 .content {
   background: var(--content-background);
   display: flex;
-  grid-area: content;
   min-height: 100vh;
   overflow: auto;
   padding: 2rem;

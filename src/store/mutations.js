@@ -10,5 +10,8 @@ export default {
   },
   setItems: (state, newItems) => {
     state.items = newItems
+  },
+  addItem: (state, newItem) => {
+    state.items.push(newItem)
   }
 }
