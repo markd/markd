@@ -10,11 +10,9 @@
 </template>
 
 <script>
-import db from './database'
-
-import Sidebar from './components/Sidebar.vue'
-import Navigation from './components/Navigation.vue'
-import Icons from './components/Icons.vue'
+import Sidebar from './components/Sidebar'
+import Navigation from './components/Navigation'
+import Icons from './components/Icons'
 
 export default {
   name: 'App',
@@ -29,10 +27,6 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch('initialLoad')
-    db.settings.each(setting => {
-      console.log(setting)
-    })
     this.$store.dispatch('initialLoad')
   }
 }
@@ -60,5 +54,13 @@ export default {
   min-height: 100vh;
   overflow: auto;
   padding: 2rem;
+}
+
+::-webkit-input-placeholder,
+:-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder {
+  color: #fff;
 }
 </style>

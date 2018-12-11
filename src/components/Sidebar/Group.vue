@@ -16,6 +16,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sidebarGroup {
+  margin: 16px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .sidebarGroup__title {
   user-select: none;
   color: var(--sidebar-title-color);
@@ -25,5 +37,6 @@ export default {
   text-transform: uppercase;
   font-weight: 100;
   padding: 24px 12px 4px;
+  margin-bottom: 8px;
 }
 </style>

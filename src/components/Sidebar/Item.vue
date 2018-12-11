@@ -1,12 +1,8 @@
 <template>
-  <router-link :to="`/${route}/${collection.key}`" class="sidebar__groupItem" :class="{ 'sidebar__groupItem--active': collection.active }">
-    <svg v-if="isIcon" class="sidebar__groupItemIcon">
-      <use :xlink:href="'#icon-' + collection.icon" />
-    </svg>
-    <svg v-else class="sidebar__groupItemIcon" :style="this.style">
-      <use xlink:href="#icon-circle" />
-    </svg>
-    <div class="sidebar__groupItemName">{{ collection.name }}</div>
+  <router-link :to="`/${route}`" class="sidebar__groupItem" active-class="sidebar__groupItem--active" :exact="true">
+    <div class="sidebar__groupItemName">
+      <slot></slot>
+    </div>
   </router-link>
 </template>
 
@@ -14,23 +10,13 @@
 export default {
   name: 'SidebarItem',
   props: {
+    active: {
+      type: Boolean,
+      default: false
+    },
     route: {
       type: String,
       required: true
-    },
-    collection: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    isIcon() {
-      return !!this.collection.icon
-    },
-    style() {
-      return this.collection.colour
-        ? `color: ${this.collection.colour};`
-        : 'color: slategrey;'
     }
   }
 }
