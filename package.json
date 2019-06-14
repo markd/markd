@@ -30,7 +30,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.0.1",
