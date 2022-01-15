@@ -96,7 +96,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "semver": "^5.4.1",
-    "shelljs": "^0.7.8",
+    "shelljs": "^0.8.5",
     "tap-nyan": "^1.1.0",
     "url-loader": "^0.5.9",
     "vue-loader": "^13.0.4",
